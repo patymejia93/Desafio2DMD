@@ -1,0 +1,784 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/21/2022 8:17:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-L55RDB7"
+  DTS:CreatorName="DESKTOP-L55RDB7\patym"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{64C802FB-5B98-4BE5-B8DB-DA6DEA507C1B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="17418"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Package1"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{05F02F6E-E9E4-4144-B407-DFE83DA13748}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EBDA3AA2-40A3-4FC4-9489-207F3216E082}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-L55RDB7\SQLSERVER;Initial Catalog=SV2020;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{106938C8-2E97-4669-A09D-796144B639EE}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="17418"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\patym\Downloads\2020_SV_Region_Mobility_Report_Places.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_region_code"
+              DTS:DTSID="{B7A78C82-9593-4548-9982-0DC5E78D2563}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_region"
+              DTS:DTSID="{B5FC67E2-E62F-45E6-8CCD-82E9526F8BB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sub_region_1"
+              DTS:DTSID="{53C93CD3-9536-4B8E-B398-9A91C474FB01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sub_region_2"
+              DTS:DTSID="{CC9C340A-6809-43CD-AD99-214CFB3B1C48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="metro_area"
+              DTS:DTSID="{A0E97708-C43C-4C57-B197-F1B2EEECE815}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="iso_3166_2_code"
+              DTS:DTSID="{77407667-67E9-423C-B622-A9A1813F32BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="census_fips_code"
+              DTS:DTSID="{AFD55D49-C122-4EEC-9945-81A56F1EE0B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="place_id"
+              DTS:DTSID="{F946733A-2701-4D55-9500-5E7E54E1AA42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{CDEE7A58-E75F-4AB4-8241-3FC2D8BD67AB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea de SQL Preparación 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{C95BFECD-FCB2-4BEF-9451-569F1D0278C6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea de SQL Preparación 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EBDA3AA2-40A3-4FC4-9489-207F3216E082}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[2020_SV_Region_Mobility_Report_Places] (&#xA;[country_region_code] varchar(50),&#xA;[country_region] varchar(50),&#xA;[sub_region_1] varchar(50),&#xA;[sub_region_2] varchar(50),&#xA;[metro_area] varchar(50),&#xA;[iso_3166_2_code] varchar(50),&#xA;[census_fips_code] varchar(50),&#xA;[place_id] varchar(50),&#xA;[date] varchar(50)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{5CC13A86-9CE7-4608-9B2D-F891B72E6544}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destino - 2020_SV_Region_Mobility_Report_Places"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[2020_SV_Region_Mobility_Report_Places]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[country_region_code]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_region_code"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[country_region_code]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[country_region_code]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[country_region]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_region"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[country_region]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[country_region]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[sub_region_1]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sub_region_1"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[sub_region_1]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[sub_region_1]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[sub_region_2]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sub_region_2"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[sub_region_2]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[sub_region_2]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[metro_area]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="metro_area"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[metro_area]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[metro_area]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[iso_3166_2_code]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="iso_3166_2_code"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[iso_3166_2_code]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[iso_3166_2_code]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[census_fips_code]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="census_fips_code"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[census_fips_code]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[census_fips_code]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[place_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="place_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[place_id]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[place_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].Columns[date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="date"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[date]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[country_region_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_region_code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[country_region]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_region" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[sub_region_1]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="sub_region_1" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[sub_region_2]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="sub_region_2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[metro_area]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="metro_area" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[iso_3166_2_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="iso_3166_2_code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[census_fips_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="census_fips_code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[place_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="place_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input].ExternalColumns[date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="17418"
+              name="Origen - 2020_SV_Region_Mobility_Report_Places_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[country_region_code]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[country_region_code]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[country_region_code]"
+                      name="country_region_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[country_region]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[country_region]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[country_region]"
+                      name="country_region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[sub_region_1]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[sub_region_1]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[sub_region_1]"
+                      name="sub_region_1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[sub_region_2]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[sub_region_2]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[sub_region_2]"
+                      name="sub_region_2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[metro_area]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[metro_area]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[metro_area]"
+                      name="metro_area"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[iso_3166_2_code]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[iso_3166_2_code]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[iso_3166_2_code]"
+                      name="iso_3166_2_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[census_fips_code]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[census_fips_code]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[census_fips_code]"
+                      name="census_fips_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[place_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[place_id]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[place_id]"
+                      name="place_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[date]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[country_region_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_region_code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[country_region]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="country_region" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[sub_region_1]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="sub_region_1" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[sub_region_2]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="sub_region_2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[metro_area]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="metro_area" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[iso_3166_2_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="iso_3166_2_code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[census_fips_code]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="census_fips_code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[place_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="place_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output].ExternalColumns[date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Flat File Source Output]"
+              endId="Package\Tarea Flujo de datos 1\Destino - 2020_SV_Region_Mobility_Report_Places.Inputs[Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Tarea Flujo de datos 1\Origen - 2020_SV_Region_Mobility_Report_Places_csv.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{FA2CBB02-02AD-4C3A-9A82-0B16A99E7CF7\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{FA2CBB02-02AD-4C3A-9A82-0B16A99E7CF7}"
+      DTS:From="Package\Tarea de SQL Preparación 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{FA2CBB02-02AD-4C3A-9A82-0B16A99E7CF7}"
+      DTS:To="Package\Tarea Flujo de datos 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Tarea de SQL Preparación 1"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Flujo de datos 1"
+          TopLeft="18.5,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{FA2CBB02-02AD-4C3A-9A82-0B16A99E7CF7\}]"
+          TopLeft="111,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
